@@ -1,10 +1,24 @@
 /* ================================= GLOBAL STYLES ================================= */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300');
 
 /* ================================= NAVBAR STYLES ================================= */
 .navbar { display: block; text-align: center; }
-.navbar .container { justify-content: center; padding-bottom: 0.5em; margin-bottom: 1em; border-bottom: 1px solid lightgray; }
+.navbar .container:first-child { justify-content: center; position: relative; }
+.navbar .container:not(:first-child) { justify-content: center; padding-bottom: 0.5em; margin-bottom: 1em; border-bottom: 1px solid lightgray; }
 .navbar .navbar-nav { flex-direction: row; gap: 2em; }
+.navbar .navbar-brand { margin-right: 0; }
+.navbar .navbar-brand h1 { font-family: 'Comfortaa', cursive; }
+.navbar a.navbar-brand, .navbar a.navbar-brand:link { text-decoration: none; color: black; }
+.navbar .dark-mode-toggle { position: absolute; right: 1em; top: 1em; }
 
 /* ================================= FOOTER STYLES ================================= */
 footer { margin-top: auto!important; padding-top: 1rem!important; padding-bottom: 1rem!important; background-color: rgb(248, 249, 250); }
 footer p { margin: 0; font-size: 0.8rem; color: #737373; text-align: center; }
+
+/* =================================== DARK MODE =================================== */
+.dark-mode { background-color: #222222; color: white; }
+.dark-mode a { color: #30a7d1; }
+.dark-mode .navbar a.navbar-brand, .navbar a.navbar-brand:link { color: white; }
+.dark-mode footer { background-color: #444444; }
+.dark-mode footer p { color: #939393; }
+.dark-mode footer a { color: #30A7D1; }
