@@ -1,0 +1,10 @@
+/* ================================= GLOBAL STYLES ================================= */
+
+/* ================================= NAVBAR STYLES ================================= */
+.navbar { display: block; text-align: center; }
+.navbar .container { justify-content: center; padding-bottom: 0.5em; margin-bottom: 1em; border-bottom: 1px solid lightgray; }
+.navbar .navbar-nav { flex-direction: row; gap: 2em; }
+
+/* ================================= FOOTER STYLES ================================= */
+footer { margin-top: auto!important; padding-top: 1rem!important; padding-bottom: 1rem!important; background-color: rgb(248, 249, 250); }
+footer p { margin: 0; font-size: 0.8rem; color: #737373; text-align: center; }
