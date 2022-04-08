@@ -3,11 +3,12 @@
 
 /* ================================= NAVBAR STYLES ================================= */
 .navbar { display: block; text-align: center; }
-.navbar .container:first-child { justify-content: center; position: relative; }
-.navbar .container:not(:first-child) { justify-content: center; padding-bottom: 0.5em; margin-bottom: 1em; border-bottom: 1px solid lightgray; }
+.navbar .container { justify-content: center; position: relative; }
+.navbar .container p { margin-bottom: 0; }
 .navbar .navbar-nav { flex-direction: row; gap: 2em; }
 .navbar .navbar-brand { margin-right: 0; }
-.navbar .navbar-brand h1 { font-family: 'Comfortaa', cursive; }
+.navbar h1 { font-family: 'Comfortaa', cursive; }
+.navbar h2 { font-size: calc(1rem + 0.4vw); font-weight: 100; }
 .navbar a.navbar-brand, .navbar a.navbar-brand:link { text-decoration: none; color: black; }
 .navbar .dark-mode-toggle { position: absolute; right: 1em; top: 1em; }
 

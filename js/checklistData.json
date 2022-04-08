@@ -1,0 +1,66 @@
+const checklistData = {
+	clothing: {
+		id:		"clothing",
+		title:	"Clothing",
+		contents: {
+			shirts: {			id: "shirts",				title: "Shirts"									},
+			pants: {			id: "pants",				title: "Pants"									},
+			skirts: {			id: "skirts",				title: "Skirts"									},
+			dresses: {			id: "dresses",				title: "Dresses"								},
+			pajamas: {			id: "pajamas",				title: "Pajamas"								},
+			jackets: {			id: "jackets",				title: "Jackets"								},
+			handbags: {			id: "handbags",				title: "Handbags"								},
+			belts_scarves: {	id: "beltsScarves",			title: "Belts &amp; scarves"					},
+			shoes_boots: {		id: "shoesBoots",			title: "Shoes &amp; boots"						},
+			hats_gloves: {		id: "hatsGloves",			title: "Hats &amp; gloves"						},
+			socks_underwear: {	id: "socksUnderwear",		title: "Socks &amp; underwear"					},
+			jewelry: {			id: "jewelry",				title: "Jewelry"								},
+			costumes: {			id: "costumes",				title: "Costumes"								},
+			athletic: {			id: "athletic",				title: "Athletic"								},
+		}
+	},
+	books: {
+		id:		"books",
+		title:	"Books",
+		contents: {
+			cookbooks: {		id: "cookbooks",			title: "Cookbooks"								},
+			fiction: {			id: "fiction",				title: "Fiction"								},
+			nonfiction: {		id: "nonfiction",			title: "Nonfiction"								},
+			kids: {				id: "kids",					title: "Kids"									},
+			magazines: {		id: "magazines",			title: "magazines"								},
+			reference: {		id: "reference",			title: "Reference &amp; textbooks"				},
+			phone: {			id: "phone",				title: "Phone books"							}
+		}
+	},
+	papers: {
+		id:		"papers",
+		title:	"Papers",
+		contents: {
+			coupons_receipts: {	id: "couponsReceipts",		title: "Coupons &amp; receipts"					},
+			taxes: {			id: "taxes", 				title: "Taxes"									},
+			files: {			id: "files",				title: "Files"									},
+			manuals: {			id: "manuals",				title: "Warranties &amp; instruction manuals"	},
+			important: {		id: "important", 			title: "Important documents"					},
+			bills: {			id: "bills",				title: "Bills"									},
+			cards: {			id: "cards",				title: "Greeting cards"							},
+			wrapping: {			id: "wrapping",				title: "Wrapping paper &amp; gift bags"			},
+			checkbooks: {		id: "checkbooks",			title: "Checkbooks"								},
+			notes: {			id: "notes",				title: "School notes &amp; worksheets"			},
+			projects: {			id: "projects",				title: "School projects"						},
+			business: {			id: "business",				title: "Business cards"							},
+			recipes: {			id: "recipes",				title: "Recipes"								}
+		}
+	},
+	general: {
+		id:		"general",
+		title:	"General",
+		contents: {
+			discs: {			id: "discs",				title: "DVDs, CDs, &amp; BluRays"				},
+			games: {			id: "video games",			title: "Video games"							},
+			cords_remotes: {	id: "cordsRemotes",			title: "Cords &amp; remotes"					},
+			craft: {			id: "craft",				title: "Craft supplies"							},
+			pet: {				id: "pet",					title: "Pet supplies"							},
+			coins: {			id: "coins",				title: "Coins"									}
+		}
+	}
+};
