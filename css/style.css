@@ -19,7 +19,7 @@ footer p { margin: 0; font-size: 0.8rem; color: #737373; text-align: center; }
 /* =================================== DARK MODE =================================== */
 .dark-mode { background-color: #222222; color: white; }
 .dark-mode a { color: #30a7d1; }
-.dark-mode .navbar a.navbar-brand, .navbar a.navbar-brand:link { color: white; }
+.dark-mode .navbar a.navbar-brand, .dark-mode .navbar a.navbar-brand:link { color: white; }
 .dark-mode footer { background-color: #444444; }
 .dark-mode footer p { color: #939393; }
 .dark-mode footer a { color: #30A7D1; }
