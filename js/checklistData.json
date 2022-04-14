@@ -56,11 +56,21 @@ const checklistData = {
 		title:	"General",
 		contents: {
 			discs: {			id: "discs",				title: "DVDs, CDs, &amp; BluRays"				},
-			games: {			id: "video games",			title: "Video games"							},
+			games: {			id: "videoGames",			title: "Video games"							},
 			cords_remotes: {	id: "cordsRemotes",			title: "Cords &amp; remotes"					},
 			craft: {			id: "craft",				title: "Craft supplies"							},
 			pet: {				id: "pet",					title: "Pet supplies"							},
 			coins: {			id: "coins",				title: "Coins"									}
+		}
+	},
+	kids: {
+		id:		"kids",
+		title:	"Kids",
+		contents: {
+			toys: {				id: "toys",					title: "Toys &amp; bath toys"					},
+			outdoor: {			id: "outdoor",				title: "Outdoor toys"							},
+			sports: {			id: "sports",				title: "Sports equipment"						},
+			games: {			id: "games",				title: "Board games &amp; puzzles"				}
 		}
 	}
 };
