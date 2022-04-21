@@ -16,6 +16,8 @@
 .grid { margin: 0 auto; }
 .grid-item { width: 300px; border: 1px solid lightgray; border-radius: 5px; padding: 1em; margin-bottom: 20px; }
 .grid-item h2 { font-size: 1.5rem; border-bottom: 1px solid lightgray; padding-bottom: 0.25em; }
+.grid-item i.bi { float: right; color: #30a7d1; font-size: 1.25rem; }
+.grid-item i.bi:focus, .grid-item i.bi:hover, .grid-item i.bi:active { color: #30d169; cursor: pointer; }
 
 /* ================================= FOOTER STYLES ================================= */
 footer { margin-top: auto!important; padding-top: 1rem!important; padding-bottom: 1rem!important; background-color: rgb(248, 249, 250); }
