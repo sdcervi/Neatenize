@@ -43,13 +43,11 @@
 		<div class="container">
 			<h2>A simple, minimalist clean-up checklist for a simple, minimalist&nbsp;environment</h2>
 		</div>
-		<!--div class="container">
+		<div class="container">
 			<ul class="navbar-nav">
-				<li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-				<li class="nav-item"><a class="nav-link disabled">Disabled</a></li>
+				<li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal">About</a></li>
 			</ul>
-		</div-->
+		</div>
 		<div class="container d-block"><hr></div>
 	</nav>
 </header>
@@ -68,6 +66,33 @@
 		<p class="d-none d-print-block"><a href="https://neatenize.app">neatenize.app</a></p>
 	</div>
 </footer>
+
+<!-- About modal -->
+<div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="aboutModalLabel">About Neatenize</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<p>Neatenize is a simple, easy-to-use checklist to help you reorganize, tidy up, and clean out.  It&rsquo;s loosely based on the <a href="https://konmari.com/">Konmari method</a>, which sorts items by category instead of room.</p>
+				<p>While it&rsquo;s a very thorough list, it&rsquo;s not exhaustive; not all categories will apply to your needs, and you may have other categories not on this list.  Use Neatenize as a starting point and framework.</p>
+				<h6>How to save checklist progress</h6>
+				<p><a href="./login.html">Create an account</a> to save your progress and access it on multiple devices.</p>
+				<h6>Printing this checklist</h6>
+				<p>Neatenize should print well enough as-is, but you may need to tweak margins in your print settings.  Due to bugs in Chrome and other browsers, the checklist sections may break over pages.</p>
+				<h6>Questions, bugs to report, requests for new category/item, or general feedback</h6>
+				<p>Send me a message using this form.</p>
+				<h6>How to contribute toward further development of Neatenize</h6>
+				<p>Developing websites and applications takes time and brainpower.  If you&rsquo;d like to support my work on Neatenize and other projects, please <a href="https://ko-fi.com/sdcervi">send me a few dollars on Ko-fi</a>. Thank you for your support!</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
 
 <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="./js/darkmode.js"></script>

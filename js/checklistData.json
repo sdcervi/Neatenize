@@ -292,13 +292,14 @@ const checklistData = {
 			shampoo: {			id: "shampoo",				title: "Shampoo, conditioner &amp; other products"				},
 			hair: {				id: "hair",					title: "Hair brushes, combs &amp; accessories"	},
 			dryer: {			id: "dryer",				title: "Hair dryers, irons &amp; curlers"		},
+			massage: {			id: "massage",				title: "Massage tools &amp; devices"			},
 			samples: {			id: "samples",				title: "Samples &amp; travel sizes"				},
 			oral: {				id: "oral",					title: "Oral hygiene"							},
 			soap: {				id: "soap",					title: "Soap &amp; body wash"					},
 			perfume: {			id: "perfume",				title: "Perfume &amp; cologne"					},
 			oils: {				id: "oils",					title: "Essential oils &amp; other oils"		},
 			feminine: {			id: "feminine",				title: "Feminine care"							},
-			massage: {			id: "massage",				title: "Massage tools &amp; devices"			}
+			intimate: {			id: "intimate",				title: "Intimate products"						}
 		}
 	},
 	tools: {
