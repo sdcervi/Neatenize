@@ -5,18 +5,31 @@ const checklistData = {
 		contents: {
 			shirts: {			id: "shirts",				title: "Shirts"									},
 			pants: {			id: "pants",				title: "Pants"									},
+			shorts: {			id: "shorts",				title: "Shorts & capris"						},
 			skirts: {			id: "skirts",				title: "Skirts"									},
 			dresses: {			id: "dresses",				title: "Dresses"								},
-			pajamas: {			id: "pajamas",				title: "Pajamas"								},
-			jackets: {			id: "jackets",				title: "Jackets"								},
-			handbags: {			id: "handbags",				title: "Handbags"								},
-			belts_scarves: {	id: "beltsScarves",			title: "Belts &amp; scarves"					},
-			shoes_boots: {		id: "shoesBoots",			title: "Shoes &amp; boots"						},
-			hats_gloves: {		id: "hatsGloves",			title: "Hats &amp; gloves"						},
-			socks_underwear: {	id: "socksUnderwear",		title: "Socks &amp; underwear"					},
-			jewelry: {			id: "jewelry",				title: "Jewelry"								},
+			jackets: {			id: "jackets",				title: "Jackets &amp; coats"					},
+			pajamas: {			id: "pajamas",				title: "Pajamas &amp; loungewear"				},
+			socks: {			id: "socks",				title: "Socks &amp; tights"						},
+			underwear: {		id: "underwear",			title: "Underwear &amp; bras"					},
+			active: {			id: "active",				title: "Active &amp; swim wear"					},
 			costumes: {			id: "costumes",				title: "Costumes"								},
-			athletic: {			id: "athletic",				title: "Athletic"								},
+			formal: {			id: "formal",				title: "Formal wear"							}
+		}
+	},
+	accessories: {
+		id:		"accessories",
+		title:	"Accessories",
+		contents: {
+			handbags: {			id: "handbags",				title: "Handbags &amp; purses"					},
+			belts: {			id: "belts",				title: "Belts"									},
+			scarves: {			id: "scarves",				title: "Scarves"								},
+			shoes: {			id: "shoes",				title: "Shoes"									},
+			boots: {			id: "boots",				title: "Boots"									},
+			sandals: {			id: "sandals",				title: "Sandals"								},
+			hats: {				id: "hats",					title: "Hats"									},
+			gloves: {			id: "gloves",				title: "Gloves &amp; mittens"					},
+			jewelry: {			id: "jewelry",				title: "Jewelry"								}
 		}
 	},
 	books: {
@@ -26,51 +39,320 @@ const checklistData = {
 			cookbooks: {		id: "cookbooks",			title: "Cookbooks"								},
 			fiction: {			id: "fiction",				title: "Fiction"								},
 			nonfiction: {		id: "nonfiction",			title: "Nonfiction"								},
+			reference: {		id: "reference",			title: "Reference"								},
+			coffeetable: {		id: "coffeetable",			title: "Coffee table books"						},
+			comic: {			id: "comic",				title: "Comic books &amp; graphic novels"		},
 			kids: {				id: "kids",					title: "Kids"									},
-			magazines: {		id: "magazines",			title: "magazines"								},
-			reference: {		id: "reference",			title: "Reference &amp; textbooks"				},
+			magazines: {		id: "magazines",			title: "Magazines"								},
+			textbooks: {		id: "textbooks",			title: "Textbooks"								},
+			manuals: {			id: "manuals",				title: "Manuals &amp; guides"					},
 			phone: {			id: "phone",				title: "Phone books"							}
+		}
+	},
+	linens: {
+		id:		"linens",
+		title:	"Linens &amp; bedding",
+		contents: {
+			sheets: {			id: "bedsheets",			title: "Bedsheets"								},
+			blankets: {			id: "blankets",				title: "Blankets &amp; duvets"					},
+			pillows: {			id: "pillows",				title: "Pillows"								},
+			throwPillows: {		id: "throwPillows",			title: "Throw blankets"							},
+			throwBlankets: {	id: "throwBlankets",		title: "Throw pillows"							},
+			towels: {			id: "towels",				title: "Towels &amp; washcloths"				},
+			curtains: {			id: "curtains",				title: "Curtains"								},
+			tablecloths: {		id: "tablecloths",			title: "Tablecloths"							},
+			placemats: {		id: "placemats",			title: "Placemats"								},
+			napkins: {			id: "napkins",				title: "Napkins"								}
 		}
 	},
 	papers: {
 		id:		"papers",
 		title:	"Papers",
 		contents: {
-			coupons_receipts: {	id: "couponsReceipts",		title: "Coupons &amp; receipts"					},
+			receipts: {			id: "receipts",				title: "Receipts"								},
 			taxes: {			id: "taxes", 				title: "Taxes"									},
-			files: {			id: "files",				title: "Files"									},
-			manuals: {			id: "manuals",				title: "Warranties &amp; instruction manuals"	},
-			important: {		id: "important", 			title: "Important documents"					},
-			bills: {			id: "bills",				title: "Bills"									},
+			insurance: {		id: "insurance", 			title: "Insurance policies"						},
+			certificates: {		id: "certificates", 		title: "Certificates, e.g. birth, SSN"			},
+			legal: {			id: "legal", 				title: "Court &amp; legal paperwork"			},
+			warranties: {		id: "warranties",			title: "Warranties"								},
+			bills: {			id: "bills",				title: "Bills &amp; bank statements"			},
 			cards: {			id: "cards",				title: "Greeting cards"							},
-			wrapping: {			id: "wrapping",				title: "Wrapping paper &amp; gift bags"			},
-			checkbooks: {		id: "checkbooks",			title: "Checkbooks"								},
 			notes: {			id: "notes",				title: "School notes &amp; worksheets"			},
 			projects: {			id: "projects",				title: "School projects"						},
+			sheetmusic: {		id: "sheetmusic",			title: "Sheet music"							},
 			business: {			id: "business",				title: "Business cards"							},
-			recipes: {			id: "recipes",				title: "Recipes"								}
+			clippings: {		id: "clippings",			title: "Clippings"								},
+			ids: {				id: "ids",					title: "IDs and passports"						},
+			wrapping: {			id: "wrapping",				title: "Wrapping paper &amp; gift bags"			}
 		}
 	},
-	general: {
-		id:		"general",
-		title:	"General",
+	electronics: {
+		id:		"electronics",
+		title:	"Electronics",
 		contents: {
-			discs: {			id: "discs",				title: "DVDs, CDs, &amp; BluRays"				},
+			phones: {			id: "phones",				title: "Mobile and landline phones"				},
+			tablets: {			id: "tablets",				title: "Tablets"								},
+			computers: {		id: "computers",			title: "Computers"								},
+			chargers: {			id: "chargers",				title: "Cords, chargers &amp; remotes"			},
+			powerstrips: {		id: "powerstrips",			title: "Power strips &amp; extension cords"		},
+			adapters: {			id: "adapters",				title: "Adapters"								},
+			software: {			id: "software",				title: "Software"								},
+			printers: {			id: "printers",				title: "Printers &amp; accessories"				},
+			shredders: {		id: "shredders",			title: "Paper shredders"						},
+			cameras: {			id: "cameras",				title: "Cameras &amp; accessories"				},
+			headphones: {		id: "headphones",			title: "Headphones, earbuds &amp; headsets"		},
+			dataStorage: {		id: "dataStorage",			title: "USB drives, memory cards &amp; external hard drives"	},
+			boxes: {			id: "boxes",				title: "Empty boxes"							}
+		}
+	},
+	entertainment: {
+		id:		"entertainment",
+		title:	"Entertainment",
+		contents: {
+			tv: {				id: "tv",					title: "TVs &amp; remotes"						},
+			discPlayers: {		id: "discPlayers",			title: "DVD &amp; BluRay players"				},
+			vhs: {				id: "vhs",					title: "VHS players and rewinders"				},
+			discs: {			id: "discs",				title: "DVDs, CDs &amp; BluRays"				},
+			tapes: {			id: "tapes",				title: "Cassette tapes &amp; 8-tracks"			},
+			records: {			id: "records",				title: "Records"								},
+			players: {			id: "players",				title: "Music players"							},
+			speakers: {			id: "speakers",				title: "Stereo equipment, e.g. speakers, subwoofers, tuners"	},
+			consoles: {			id: "consoles",				title: "Video game consoles"					},
 			games: {			id: "videoGames",			title: "Video games"							},
-			cords_remotes: {	id: "cordsRemotes",			title: "Cords &amp; remotes"					},
-			craft: {			id: "craft",				title: "Craft supplies"							},
-			pet: {				id: "pet",					title: "Pet supplies"							},
-			coins: {			id: "coins",				title: "Coins"									}
+			instruments: {		id: "instruments",			title: "Musical instruments"					},
+			cards: {			id: "cardDecks",			title: "Playing cards"							},
+			boardgames: {		id: "boardgames",			title: "Board games &amp; chess boards"			}
+		}
+	},
+	office: {
+		id:		"office",
+		title:	"Office",
+		contents: {
+			writing: {			id: "writing",				title: "Pens, pencils, markers &amp; crayons"	},
+			filing: {			id: "filing",				title: "Filing cabinets &amp; folders"			},
+			labels: {			id: "labels",				title: "Labels &amp; label makers"				},
+			paper: {			id: "officePaper",			title: "Paper, pads, notebooks &amp; sticky notes"				},
+			craft: {			id: "craft",				title: "Craft &amp; art supplies"				},
+			packing: {			id: "packing",				title: "Packing materials &amp; boxes"			},
+			mailing: {			id: "mailing",				title: "Envelopes &amp; stamps"					},
+			cards: {			id: "officeCards",			title: "Notecards &amp; postcards"				},
+			punches: {			id: "punches",				title: "Hole punches"							},
+			clips: {			id: "officeClips",			title: "Paperclips &amp; binder clips"			},
+			binders: {			id: "binders",				title: "Binders &amp; planners"					},
+			calendars: {		id: "calendars",			title: "Calendars"								},
+			scissors: {			id: "scissors",				title: "Scissors"								},
+			staplers: {			id: "staplers",				title: "Staplers &amp; staples"					},
+			erasers: {			id: "erasers",				title: "Erasers &amp; white-out"				},
+			rubberbands: {		id: "rubberbands",			title: "Rubber bands, twist ties &amp; tie wraps"				}
+		}
+	},
+	pets: {
+		id:		"pets",
+		title:	"Pets",
+		contents: {
+			food: {				id: "food",					title: "Food &amp; treats"						},
+			dishes: {			id: "dishes",				title: "Dishes, bowls &amp; feeders"			},
+			collars: {			id: "collars",				title: "Collars, harnesses &amp; leashes"		},
+			paperwork: {		id: "paperwork",			title: "Paperwork, licenses &amp; tags"			},
+			toys: {				id: "toys",					title: "Toys &amp; play equipment"				},
+			furniture: {		id: "furniture",			title: "Pet furniture &amp; beds"				},
+			habitats: {			id: "habitats",				title: "Habitats, tanks &amp; terrariums"		},
+			crates: {			id: "crates",				title: "Crates, kennels &amp; gates"			},
+			carriers: {			id: "carriers",				title: "Carriers"								},
+			cleaning: {			id: "petCleaning",			title: "Cleaning supplies"						},
+			cleanup: {			id: "cleanup",				title: "Waste bags &amp; scoops"				},
+			litter: {			id: "litter",				title: "Litter &amp; litterboxes"				},
+			firstaid: {			id: "petsFirstaid",			title: "First aid &amp; medications"			}
 		}
 	},
 	kids: {
 		id:		"kids",
 		title:	"Kids",
 		contents: {
-			toys: {				id: "toys",					title: "Toys &amp; bath toys"					},
+			toys: {				id: "toys",					title: "Indoor toys"							},
+			bath: {				id: "bath",					title: "Bath toys"								},
 			outdoor: {			id: "outdoor",				title: "Outdoor toys"							},
 			sports: {			id: "sports",				title: "Sports equipment"						},
-			games: {			id: "games",				title: "Board games &amp; puzzles"				}
+			potty: {			id: "potty",				title: "Potty training &amp; diapers"			},
+			highchair: {		id: "highchair",			title: "High chairs"							}
+		}
+	},
+	money: {
+		id:		"money",
+		title:	"Money",
+		contents: {
+			coins: {			id: "coins",				title: "Coins"									},
+			cash: {				id: "cash",					title: "Cash"									},
+			checkbooks: {		id: "checkbooks",			title: "Checks &amp; checkbooks"				},
+			cards: {			id: "moneyCards",			title: "Credit, debit &amp; ATM cards"			},
+			rewards: {			id: "rewards",				title: "Gift &amp; rewards cards"				},
+			coupons: {			id: "coupons",				title: "Coupons"								},
+			passbooks: {		id: "passbooks",			title: "Passbooks &amp; vouchers"				},
+			foreign: {			id: "foreign",				title: "Foreign currency"						},
+			wallets: {			id: "wallets",				title: "Wallets &amp; billfolds"				}
+		}
+	},
+	cleaning: {
+		id:		"cleaning",
+		title:	"Cleaning",
+		contents: {
+			scrub: {			id: "scrub",				title: "Sponges, scrubbers &amp; rags"			},
+			products: {			id: "products",				title: "Cleaning products"						},
+			empties: {			id: "empties",				title: "Empty bottles &amp; containers"			},
+			sweep: {			id: "sweep",				title: "Mops &amp; brooms"						},
+			vacuum: {			id: "vacuum",				title: "Vacuums"								},
+			buckets: {			id: "buckets",				title: "Buckets &amp; storage bins"				},
+			gloves: {			id: "gloves",				title: "Gloves"									},
+			pest: {				id: "pest",					title: "Pest control"							},
+			laundry: {			id: "laundry",				title: "Laundry supplies"						},
+			iron: {				id: "iron",					title: "Ironing supplies"						}
+		}
+	},
+	cooking: {
+		id:		"cooking",
+		title:	"Cooking",
+		contents: {
+			pantry: {			id: "pantry",				title: "Pantry"									},
+			recipes: {			id: "recipes",				title: "Recipes"								},
+			spices: {			id: "spices",				title: "Spices &amp; seasonings"				},
+			fridge: {			id: "fridge",				title: "Fridge &amp; freezer"					},
+			cookingUtensils: {	id: "cookingUtensils",		title: "Cooking utensils"						},
+			knives: {			id: "knives",				title: "Knives"									},
+			cuttingBoards: {	id: "cuttingBoards",		title: "Cutting boards"							},
+			trivets: {			id: "trivets",				title: "Trivets"								},
+			mitts: {			id: "mitts",				title: "Mitts &amp; hot pads"					},
+			potsPans: {			id: "potsPans",				title: "Pots &amp; pans"						},
+			sheets: {			id: "bakingSheets",			title: "Baking sheets"							},
+			bakingAcc: {		id: "bakingAcc",			title: "Baking accessories"						},
+			towelsAprons: {		id: "towelsAprons",			title: "Towels &amp; aprons"					},
+			appliances: {		id: "smallAppliances",		title: "Small appliances"						},
+			storageCon: {		id: "storageContainers",	title: "Storage containers &amp; bags"			},
+			mixingBowls: {		id: "mixingBowls",			title: "Mixing bowls"							}
+		}
+	},
+	eating: {
+		id:		"eating",
+		title:	"Eating",
+		contents: {
+			coffeeTea: {		id: "coffeeTea",			title: "Coffee &amp; tea"						},
+			alcohol: {			id: "alcohol",				title: "Alcohol"								},
+			silverware: {		id: "silverware",			title: "Silverware"								},
+			dishes: {			id: "dishes",				title: "Dishes"									},
+			stemware: {			id: "stemware",				title: "Stemware"								},
+			servingUtensils: {	id: "servingUtensils",		title: "Serving utensils"						},
+			servingDishes: {	id: "servingDishes",		title: "Serving dishes"							},
+			cupsMugs: {			id: "cupsMugs",				title: "Cups &amp; mugs"						},
+			travel: {			id: "travelMugs",			title: "Travel mugs"							},
+			bottles: {			id: "bottles",				title: "Water bottles"							},
+			paper: {			id: "kitchenPaper",			title: "Paper supplies"							},
+			strawsClips: {		id: "strawsClips",			title: "Straws &amp bag clips"					}
+		}
+	},
+	decor: {
+		id:		"decor",
+		title:	"Decor",
+		contents: {
+			frames: {			id: "frames",				title: "Picture frames"							},
+			artwork: {			id: "artwork",				title: "Artwork"								},
+			plants: {			id: "indoorPlants",			title: "Indoor plants"							},
+			mirrors: {			id: "mirrors",				title: "Mirrors"								},
+			furniture: {		id: "furniture",			title: "Furniture"								},
+			lamps: {			id: "lamps",				title: "Lamps"									},
+			candles: {			id: "candles",				title: "Candles"								},
+			vases: {			id: "vases",				title: "Vases"									},
+			clocks: {			id: "clocks",				title: "Clocks"									}
+		}
+	},
+	medical: {
+		id:		"medical",
+		title:	"Medical",
+		contents: {
+			medication: {		id: "medication",			title: "Prescription medication"				},
+			firstaid: {			id: "firstaid",				title: "First aid supplies"						},
+			bandages: {			id: "bandages",				title: "Bandages, band-aids &amp; wraps"		},
+			splints: {			id: "splints",				title: "Splints, braces &amp; slings"			},
+			crutches: {			id: "crutches",				title: "Canes &amp; crutches"					},
+			wheels: {			id: "wheels",				title: "Walkers, rollators &amp; wheelchairs"	},
+			tools: {			id: "medicalTools",			title: "Tools for mobility aids"				},
+			misc: {				id: "misc",					title: "Other medical supplies &amp; devices"	},
+			emergency: {		id: "emergency",			title: "Emergency supplies &amp; equipment"		}
+		}
+	},
+	health: {
+		id:		"health",
+		title:	"Health &amp; Hygiene",
+		contents: {
+			medicine: {			id: "medicine",				title: "Over-the-counter medicine"				},
+			supplements: {		id: "supplements",			title: "Vitamins &amp; supplements"				},
+			skincare: {			id: "skincare",				title: "Skincare &amp; facial care"				},
+			paper: {			id: "bathPaper",			title: "Toilet paper &amp; tissues"				},
+			shaving: {			id: "shaving",				title: "Trimming &amp; shaving"					},
+			nails: {			id: "nails",				title: "Nail care &amp; polish"					},
+			makeup: {			id: "makeup",				title: "Makeup, bags &amp; brushes"				},
+			shampoo: {			id: "shampoo",				title: "Shampoo, conditioner &amp; other products"				},
+			hair: {				id: "hair",					title: "Hair brushes, combs &amp; accessories"	},
+			dryer: {			id: "dryer",				title: "Hair dryers, irons &amp; curlers"		},
+			samples: {			id: "samples",				title: "Samples &amp; travel sizes"				},
+			oral: {				id: "oral",					title: "Oral hygiene"							},
+			soap: {				id: "soap",					title: "Soap &amp; body wash"					},
+			perfume: {			id: "perfume",				title: "Perfume &amp; cologne"					},
+			oils: {				id: "oils",					title: "Essential oils &amp; other oils"		},
+			feminine: {			id: "feminine",				title: "Feminine care"							},
+			massage: {			id: "massage",				title: "Massage tools &amp; devices"			}
+		}
+	},
+	tools: {
+		id:		"tools",
+		title:	"Tools &amp; hardware",
+		contents: {
+			hammers: {			id: "hammers",				title: "Hammers &amp; pry bars"					},
+			saws: {				id: "saws",					title: "Saws &amp; miter boxes"					},
+			screwdrivers: {		id: "screwdrivers",			title: "Screwdrivers &amp; pliers"				},
+			allen: {			id: "allen",				title: "Allen &amp; Torx keys"					},
+			hardware: {			id: "hardware",				title: "Nails, screws, nuts &amp; bolts"		},
+			wrenches: {			id: "wrenches",				title: "Wrenches, ratchets &amp; sockets"		},
+			drills: {			id: "drills",				title: "Drills &amp; bits"						},
+			sanding: {			id: "sanding",				title: "Sanders, sandpaper &amp; blocks"		},
+			powertools: {		id: "powertools",			title: "Power tools"							},
+			knives: {			id: "knives",				title: "Utility knives &amp; razors"			},
+			measure: {			id: "measure",				title: "Tape measures, rulers, levels &amp; squares"			},
+			tape: {				id: "tape",					title: "Tape, glue &amp; adhesives"				},
+			paint: {			id: "paint",				title: "Paint, brushes, rollers, trays &amp; spray paint"		},
+			wall: {				id: "wall",					title: "Wall repair"							},
+			bulbs: {			id: "bulbs",				title: "Light bulbs"							},
+			batteries: {		id: "batteries",			title: "Batteries"								},
+			flashlights: {		id: "flashlights",			title: "Flashlights"							},
+			lighters: {			id: "lighters",				title: "Lighters &amp; matches"					},
+			keys: {				id: "keys",					title: "Keys &amp; locks"						}
+			
+		}
+	},
+	garden: {
+		id:		"garden",
+		title:	"Garden &amp; outdoors",
+		contents: {
+			tools: {			id: "gardenTools",			title: "Gardening tools"						},
+			planters: {			id: "planters",				title: "Pots &amp; planters"					},
+			fertilizer: {		id: "fertilizer",			title: "Fertilizer"								},
+			soil: {				id: "soil",					title: "Potting mix &amp; soil"					},
+			plants: {			id: "outdoorPlants",		title: "Outdoor plants"							},
+			yard: {				id: "yard",					title: "Yard maintenance"						},
+			sport: {			id: "sport",				title: "Sporting goods &amp; equipment"			},
+			camping: {			id: "camping",				title: "Camping equipment &amp; supplies"		}
+		}
+	},
+	sentimental: {
+		id:		"sentimental",
+		title:	"Sentimental",
+		contents: {
+			photos: {			id: "photos",				title: "Photos &amp; albums"					},
+			journals: {			id: "journals",				title: "Journals &amp; diaries"					},
+			memorabilia: {		id: "memorabilia",			title: "Memorabilia &amp; souvenirs"			},
+			collections: {		id: "collections",			title: "Collections"							},
+			scrapbooks: {		id: "scrapbooks",			title: "Scrapbooks"								},
+			letters: {			id: "letters",				title: "Personal letters &amp; cards"			},
+			heirlooms: {		id: "heirlooms",			title: "Heirlooms"								},
+			trophies: {			id: "trophies",				title: "Trophies &amp; medals"					}
 		}
 	}
 };

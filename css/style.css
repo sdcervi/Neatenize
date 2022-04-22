@@ -1,5 +1,6 @@
 /* ================================= GLOBAL STYLES ================================= */
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300');
+.clear { clear: both; }
 
 /* ================================= NAVBAR STYLES ================================= */
 .navbar { display: block; text-align: center; }
@@ -12,12 +13,14 @@
 .navbar a.navbar-brand, .navbar a.navbar-brand:link { text-decoration: none; color: black; }
 .navbar .dark-mode-toggle { position: absolute; right: 1em; top: 1em; }
 
-/* ================================= MASONRY STYLES ================================ */
-.grid { margin: 0 auto; }
-.grid-item { width: 300px; border: 1px solid lightgray; border-radius: 5px; padding: 1em; margin-bottom: 20px; }
-.grid-item h2 { font-size: 1.5rem; border-bottom: 1px solid lightgray; padding-bottom: 0.25em; }
-.grid-item i.bi { float: right; color: #30a7d1; font-size: 1.25rem; }
-.grid-item i.bi:focus, .grid-item i.bi:hover, .grid-item i.bi:active { color: #30d169; cursor: pointer; }
+/* ================================== CARD STYLES ================================== */
+.card { margin-bottom: 1.5em; }
+.card-header h2 { font-size: 1.35rem; margin-bottom: 0; }
+.card-header i.bi { float: right; color: #30a7d1; font-size: 1.25rem; }
+.card-header i.bi:focus, .card-header i.bi:hover, .card-header i.bi:active { color: #30d169; cursor: pointer; }
+.card-body { padding: 0; }
+.card-body .checklist { padding: 1rem; }
+.card.completed::before { content: url("../assets/check-circle-fill.svg"); height: 1.5em; width: 1.5em; position: absolute; left: -0.5em; top: -0.5em; z-index: 10; }
 
 /* ================================= FOOTER STYLES ================================= */
 footer { margin-top: auto!important; padding-top: 1rem!important; padding-bottom: 1rem!important; background-color: rgb(248, 249, 250); }
@@ -27,11 +30,28 @@ footer p { margin: 0; font-size: 0.8rem; color: #737373; text-align: center; }
 .dark-mode { background-color: #222222; color: white; }
 .dark-mode a { color: #30a7d1; }
 .dark-mode .navbar a.navbar-brand, .dark-mode .navbar a.navbar-brand:link { color: white; }
+.dark-mode .card { background-color: unset; border-color: rgba(255, 255, 255, .25); }
+.dark-mode .card-body .form-check-input { background-color: unset; border-color: rgba(255, 255, 255, .25); }
+.dark-mode .card-body .form-check-input:checked { background-color: #0d6efd; border-color: #0d6efd; }
+.dark-mode .card-header { background-color: rgba(255, 255, 255, .05); border-bottom-color: rgba(255, 255, 255, .25); }
 .dark-mode footer { background-color: #444444; }
 .dark-mode footer p { color: #939393; }
 .dark-mode footer a { color: #30A7D1; }
 
 /* ================================== PRINT STYLES ================================= */
-@media print {
+@media only print {
+	.navbar .navbar-brand img { width: 75px; height: 75px; }
+	.navbar h1 { font-size: 1.5rem; }
+	.navbar h2 { font-size: 1rem; }
+	.navbar .dark-mode-toggle { display: none; }
 	
+	.row>* { flex: 0 0 33%; width: 33%; }
+	.card { page-break-inside: avoid; break-inside: avoid; }
+	.card-header h2 { font-size: 1rem; }
+	.card-header i { display: none; }
+	.card-body { font-size: 11px; }
+	.card-body .form-check { min-height: 1rem; }
+	.card:nth-child(3n) { page-break-inside: avoid; break-inside: avoid; }
+	
+	.footer p.d-print-block a { text-decoration: none; }
 }
