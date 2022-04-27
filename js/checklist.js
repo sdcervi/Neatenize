@@ -8,11 +8,38 @@ function swapCollapse (cardID) {
 	icon.classList.toggle('bi-arrows-expand');
 }
 
+function expandAll () {
+	const cardArray = document.querySelectorAll('.collapse');
+	for (card of cardArray) {
+		if (!(card.classList.contains('show'))) {
+			card.classList.add('show');
+		}
+	}
+}
+
+function collapseAll () {
+	const cardArray = document.querySelectorAll('.show');
+	for (card of cardArray) {
+		card.classList.remove('show');
+	}
+}
+
+function collapseCompleted () {
+	const cardArray = document.querySelectorAll('.completed');
+	console.log (cardArray);
+	for (card of cardArray) {
+		const collapse = card.children[1];
+		if (collapse.classList.contains('show')) {
+			collapse.classList.remove('show');
+		}
+	}
+}
+
 for (const listIndex in checklistData) {
 	const listGroup = checklistData[listIndex];
 	checklistContent += `<div class="col"><div class="card" id="${listGroup.id}">`;
 	checklistContent += `<div class="card-header">`;
-	checklistContent += `<i class="bi bi-arrows-collapse" data-bs-toggle="collapse" data-bs-target="#collapse${listGroup.id}" aria-expanded="true" aria-controls="collapse${listGroup.id}" onclick="swapCollapse('${listGroup.id}')" role="button"></i>`;
+	checklistContent += `<i class="bi bi-arrows-collapse" data-bs-toggle="collapse" data-bs-target="#collapse${listGroup.id}" aria-expanded="true" aria-controls="collapse${listGroup.id}" onclick="swapCollapse('${listGroup.id}')" role="button" tabindex="0"></i>`;
 	checklistContent += `<h2>${listGroup.title}</h2></div>`;
 	checklistContent += `<div class="card-body collapse show" id="collapse${listGroup.id}"><div class="checklist">`;
 	for (const itemIndex in listGroup.contents) {
