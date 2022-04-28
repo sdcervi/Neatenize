@@ -1,6 +1,7 @@
 /* ================================= GLOBAL STYLES ================================= */
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300');
 .clear { clear: both; }
+.pagebreak { display: none; }
 
 /* ================================= NAVBAR STYLES ================================= */
 .navbar { display: block; text-align: center; }
@@ -47,18 +48,24 @@ footer p { margin: 0; font-size: 0.8rem; color: #737373; text-align: center; }
 
 /* ================================== PRINT STYLES ================================= */
 @media only print {
+	body.d-flex { display: block!important; }
+	footer { display: none; }
+	
 	.navbar .navbar-brand img { width: 75px; height: 75px; }
 	.navbar h1 { font-size: 1.5rem; }
 	.navbar h2 { font-size: 1rem; }
-	.navbar .dark-mode-toggle { display: none; }
+	.navbar hr { margin-bottom: 1em; }
+	.navbar .dark-mode-toggle, .navbar #nav-links, nav.expand-collapse { display: none; }
 	
-	.row>* { flex: 0 0 33%; width: 33%; }
-	.card { page-break-inside: avoid; break-inside: avoid; }
+	.row { display: block; position: relative; }
+	.col { display: block; float: left; width: 33.3333%; page-break-inside: avoid; break-inside: avoid; }
+	.col:nth-of-type(3n+1) { clear: both; }
+	/*.row>* { flex: 0 0 33%; width: 33%; }
+	.card:nth-child(3n) { page-break-inside: avoid; break-inside: avoid; } */
 	.card-header h2 { font-size: 1rem; }
 	.card-header i { display: none; }
 	.card-body { font-size: 11px; }
 	.card-body .form-check { min-height: 1rem; }
-	.card:nth-child(3n) { page-break-inside: avoid; break-inside: avoid; }
 	
 	.footer p.d-print-block a { text-decoration: none; }
 }

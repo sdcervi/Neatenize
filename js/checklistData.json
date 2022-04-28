@@ -86,6 +86,28 @@ const checklistData = {
 			wrapping: {			id: "wrapping",				title: "Wrapping paper &amp; gift bags"			}
 		}
 	},
+	office: {
+		id:		"office",
+		title:	"Office",
+		contents: {
+			writing: {			id: "writing",				title: "Pens, pencils, markers &amp; crayons"	},
+			filing: {			id: "filing",				title: "Filing cabinets &amp; folders"			},
+			labels: {			id: "labels",				title: "Labels &amp; label makers"				},
+			paper: {			id: "officePaper",			title: "Paper, pads, notebooks &amp; sticky notes"				},
+			craft: {			id: "craft",				title: "Craft &amp; art supplies"				},
+			packing: {			id: "packing",				title: "Packing materials &amp; boxes"			},
+			mailing: {			id: "mailing",				title: "Envelopes &amp; stamps"					},
+			cards: {			id: "officeCards",			title: "Notecards &amp; postcards"				},
+			punches: {			id: "punches",				title: "Hole punches"							},
+			clips: {			id: "officeClips",			title: "Paperclips &amp; binder clips"			},
+			binders: {			id: "binders",				title: "Binders &amp; planners"					},
+			calendars: {		id: "calendars",			title: "Calendars"								},
+			scissors: {			id: "scissors",				title: "Scissors"								},
+			staplers: {			id: "staplers",				title: "Staplers &amp; staples"					},
+			erasers: {			id: "erasers",				title: "Erasers &amp; white-out"				},
+			rubberbands: {		id: "rubberbands",			title: "Rubber bands, twist ties &amp; tie wraps"				}
+		}
+	},
 	electronics: {
 		id:		"electronics",
 		title:	"Electronics",
@@ -122,28 +144,6 @@ const checklistData = {
 			instruments: {		id: "instruments",			title: "Musical instruments"					},
 			cards: {			id: "cardDecks",			title: "Playing cards"							},
 			boardgames: {		id: "boardgames",			title: "Board games &amp; chess boards"			}
-		}
-	},
-	office: {
-		id:		"office",
-		title:	"Office",
-		contents: {
-			writing: {			id: "writing",				title: "Pens, pencils, markers &amp; crayons"	},
-			filing: {			id: "filing",				title: "Filing cabinets &amp; folders"			},
-			labels: {			id: "labels",				title: "Labels &amp; label makers"				},
-			paper: {			id: "officePaper",			title: "Paper, pads, notebooks &amp; sticky notes"				},
-			craft: {			id: "craft",				title: "Craft &amp; art supplies"				},
-			packing: {			id: "packing",				title: "Packing materials &amp; boxes"			},
-			mailing: {			id: "mailing",				title: "Envelopes &amp; stamps"					},
-			cards: {			id: "officeCards",			title: "Notecards &amp; postcards"				},
-			punches: {			id: "punches",				title: "Hole punches"							},
-			clips: {			id: "officeClips",			title: "Paperclips &amp; binder clips"			},
-			binders: {			id: "binders",				title: "Binders &amp; planners"					},
-			calendars: {		id: "calendars",			title: "Calendars"								},
-			scissors: {			id: "scissors",				title: "Scissors"								},
-			staplers: {			id: "staplers",				title: "Staplers &amp; staples"					},
-			erasers: {			id: "erasers",				title: "Erasers &amp; white-out"				},
-			rubberbands: {		id: "rubberbands",			title: "Rubber bands, twist ties &amp; tie wraps"				}
 		}
 	},
 	pets: {
@@ -208,46 +208,6 @@ const checklistData = {
 			iron: {				id: "iron",					title: "Ironing supplies"						}
 		}
 	},
-	cooking: {
-		id:		"cooking",
-		title:	"Cooking",
-		contents: {
-			pantry: {			id: "pantry",				title: "Pantry"									},
-			recipes: {			id: "recipes",				title: "Recipes"								},
-			spices: {			id: "spices",				title: "Spices &amp; seasonings"				},
-			fridge: {			id: "fridge",				title: "Fridge &amp; freezer"					},
-			cookingUtensils: {	id: "cookingUtensils",		title: "Cooking utensils"						},
-			knives: {			id: "knives",				title: "Knives"									},
-			cuttingBoards: {	id: "cuttingBoards",		title: "Cutting boards"							},
-			trivets: {			id: "trivets",				title: "Trivets"								},
-			mitts: {			id: "mitts",				title: "Mitts &amp; hot pads"					},
-			potsPans: {			id: "potsPans",				title: "Pots &amp; pans"						},
-			sheets: {			id: "bakingSheets",			title: "Baking sheets"							},
-			bakingAcc: {		id: "bakingAcc",			title: "Baking accessories"						},
-			towelsAprons: {		id: "towelsAprons",			title: "Towels &amp; aprons"					},
-			appliances: {		id: "smallAppliances",		title: "Small appliances"						},
-			storageCon: {		id: "storageContainers",	title: "Storage containers &amp; bags"			},
-			mixingBowls: {		id: "mixingBowls",			title: "Mixing bowls"							}
-		}
-	},
-	eating: {
-		id:		"eating",
-		title:	"Eating",
-		contents: {
-			coffeeTea: {		id: "coffeeTea",			title: "Coffee &amp; tea"						},
-			alcohol: {			id: "alcohol",				title: "Alcohol"								},
-			silverware: {		id: "silverware",			title: "Silverware"								},
-			dishes: {			id: "dishes",				title: "Dishes"									},
-			stemware: {			id: "stemware",				title: "Stemware"								},
-			servingUtensils: {	id: "servingUtensils",		title: "Serving utensils"						},
-			servingDishes: {	id: "servingDishes",		title: "Serving dishes"							},
-			cupsMugs: {			id: "cupsMugs",				title: "Cups &amp; mugs"						},
-			travel: {			id: "travelMugs",			title: "Travel mugs"							},
-			bottles: {			id: "bottles",				title: "Water bottles"							},
-			paper: {			id: "kitchenPaper",			title: "Paper supplies"							},
-			strawsClips: {		id: "strawsClips",			title: "Straws &amp bag clips"					}
-		}
-	},
 	decor: {
 		id:		"decor",
 		title:	"Decor",
@@ -276,6 +236,46 @@ const checklistData = {
 			tools: {			id: "medicalTools",			title: "Tools for mobility aids"				},
 			misc: {				id: "misc",					title: "Other medical supplies &amp; devices"	},
 			emergency: {		id: "emergency",			title: "Emergency supplies &amp; equipment"		}
+		}
+	},
+	eating: {
+		id:		"eating",
+		title:	"Eating",
+		contents: {
+			coffeeTea: {		id: "coffeeTea",			title: "Coffee &amp; tea"						},
+			alcohol: {			id: "alcohol",				title: "Alcohol"								},
+			silverware: {		id: "silverware",			title: "Silverware"								},
+			dishes: {			id: "dishes",				title: "Dishes"									},
+			stemware: {			id: "stemware",				title: "Stemware"								},
+			servingUtensils: {	id: "servingUtensils",		title: "Serving utensils"						},
+			servingDishes: {	id: "servingDishes",		title: "Serving dishes"							},
+			cupsMugs: {			id: "cupsMugs",				title: "Cups &amp; mugs"						},
+			travel: {			id: "travelMugs",			title: "Travel mugs"							},
+			bottles: {			id: "bottles",				title: "Water bottles"							},
+			paper: {			id: "kitchenPaper",			title: "Paper supplies"							},
+			strawsClips: {		id: "strawsClips",			title: "Straws &amp bag clips"					}
+		}
+	},
+	cooking: {
+		id:		"cooking",
+		title:	"Cooking",
+		contents: {
+			pantry: {			id: "pantry",				title: "Pantry"									},
+			recipes: {			id: "recipes",				title: "Recipes"								},
+			spices: {			id: "spices",				title: "Spices &amp; seasonings"				},
+			fridge: {			id: "fridge",				title: "Fridge &amp; freezer"					},
+			cookingUtensils: {	id: "cookingUtensils",		title: "Cooking utensils"						},
+			knives: {			id: "knives",				title: "Knives"									},
+			cuttingBoards: {	id: "cuttingBoards",		title: "Cutting boards"							},
+			trivets: {			id: "trivets",				title: "Trivets"								},
+			mitts: {			id: "mitts",				title: "Mitts &amp; hot pads"					},
+			potsPans: {			id: "potsPans",				title: "Pots &amp; pans"						},
+			sheets: {			id: "bakingSheets",			title: "Baking sheets"							},
+			bakingAcc: {		id: "bakingAcc",			title: "Baking accessories"						},
+			towelsAprons: {		id: "towelsAprons",			title: "Towels &amp; aprons"					},
+			appliances: {		id: "smallAppliances",		title: "Small appliances"						},
+			storageCon: {		id: "storageContainers",	title: "Storage containers &amp; bags"			},
+			mixingBowls: {		id: "mixingBowls",			title: "Mixing bowls"							}
 		}
 	},
 	health: {
