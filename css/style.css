@@ -25,6 +25,10 @@
 .card-body .checklist { padding: 1rem; }
 .card.completed::before { content: url("../assets/check-circle-fill.svg"); height: 1.5em; width: 1.5em; position: absolute; left: -0.5em; top: -0.5em; z-index: 10; }
 
+/* ================================== KEEP STYLES ================================== */
+p.keeplength { margin-left: 1em; font-weight: 500; }
+p.keeplength::before { content: "\00BB"; position: relative; right: 0.5em; }
+
 /* ================================= FOOTER STYLES ================================= */
 footer { margin-top: auto!important; padding-top: 1rem!important; padding-bottom: 1rem!important; background-color: rgb(248, 249, 250); }
 footer p { margin: 0; font-size: 0.8rem; color: #737373; text-align: center; }

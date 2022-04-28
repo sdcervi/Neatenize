@@ -11,8 +11,11 @@ function swapCollapse (cardID) {
 function expandAll () {
 	const cardArray = document.querySelectorAll('.collapse');
 	for (card of cardArray) {
+		const cardID = document.getElementById(card.id);
 		if (!(card.classList.contains('show'))) {
-			card.classList.add('show');
+			const bsCollapse = new bootstrap.Collapse(cardID, {
+				show: true
+			});
 		}
 	}
 }
@@ -20,17 +23,22 @@ function expandAll () {
 function collapseAll () {
 	const cardArray = document.querySelectorAll('.show');
 	for (card of cardArray) {
-		card.classList.remove('show');
+		const cardID = document.getElementById(card.id);
+		const bsCollapse = new bootstrap.Collapse(cardID, {
+			show: false
+		});
 	}
 }
 
 function collapseCompleted () {
 	const cardArray = document.querySelectorAll('.completed');
-	console.log (cardArray);
 	for (card of cardArray) {
 		const collapse = card.children[1];
+		const cardID = document.getElementById(collapse.id);
 		if (collapse.classList.contains('show')) {
-			collapse.classList.remove('show');
+			const bsCollapse = new bootstrap.Collapse(cardID, {
+				show: false
+			});
 		}
 	}
 }

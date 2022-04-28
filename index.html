@@ -46,6 +46,7 @@
 		<div class="container">
 			<ul class="navbar-nav">
 				<li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal">About</a></li>
+				<li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#keepModal">When to keep what?</a></li>
 			</ul>
 		</div>
 		<div class="container d-block"><hr></div>
@@ -82,20 +83,48 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="aboutModalLabel">About Neatenize</h5>
+				<h4 class="modal-title" id="aboutModalLabel">About Neatenize</h4>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
 				<p>Neatenize is a simple, easy-to-use checklist to help you reorganize, tidy up, and clean out.  It&rsquo;s loosely based on the <a href="https://konmari.com/">Konmari method</a>, which sorts items by category instead of room.</p>
 				<p>While it&rsquo;s a very thorough list, it&rsquo;s not exhaustive; not all categories will apply to your needs, and you may have other categories not on this list.  Use Neatenize as a starting point and framework.</p>
-				<h6>How to save checklist progress</h6>
+				<h5>How to save checklist progress</h5>
 				<p><a href="./login.html">Create an account</a> to save your progress and access it on multiple devices.</p>
-				<h6>Printing this checklist</h6>
+				<h5>Printing this checklist</h5>
 				<p>Neatenize should print well enough as-is, but you may need to tweak margins in your print settings.  Due to bugs in Chrome and other browsers, the checklist sections may break over pages.</p>
-				<h6>Questions, bugs to report, requests for new category/item, or general feedback</h6>
+				<h5>Questions, bugs to report, requests for new category/item, or general feedback</h5>
 				<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfOABKODd0MfbwgeY50aU9bJjPPdPBilUibSKzIqYo72zcH6g/viewform?usp=sf_link">Send me a message using this form</a>, or <a href="https://github.com/sdcervi/Neatenize/issues">check out the current GitHub issues list</a> <span class="small">(GitHub account required for posting and commenting)</span>.</p>
-				<h6>How to contribute toward further development of Neatenize</h6>
+				<h5>How to contribute toward further development of Neatenize</h5>
 				<p>Developing websites and applications takes time and brainpower.  If you&rsquo;d like to support my work on Neatenize and other projects, please <a href="https://ko-fi.com/sdcervi">send me a few dollars on Ko-fi</a>. Thank you for your support!</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- When to keep what modal -->
+<div class="modal fade" id="keepModal" tabindex="-1" aria-labelledby="keepModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="keepModalLabel">When to keep what?</h4>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<h5>Important receipts</h5>
+				<p>These include receipts for large purchases such as musical instruments, computers, cars, etc.</p>
+				<p class="keeplength">Keep them for as long as you still have that item.</p>
+				<hr>
+				<h5>Warranty cards &amp; manuals</h5>
+				<p>These include manuals and warranties for large purchases such as electronics, appliances, furniture, etc.</p>
+				<p class="keeplength">Keep them for as long as you still have that item.</p>
+				<hr>
+				<h5>Tax returns, tax documents, health insurance, property records &amp; business paperwork</h5>
+				<p>The length of time varies depending on the type of document.  <a href="https://www.irs.gov/taxtopics/tc305">The IRS has guidelines</a> for how long to keep each type of document.</p>
+				<p class="keeplength">Rule of thumb: keep them for at least 7 years.</p>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>
