@@ -5,14 +5,17 @@
 
 /* ================================= NAVBAR STYLES ================================= */
 .navbar { display: block; text-align: center; }
+.navbar .sign-in { position: absolute; right: 1em; top: 1em; }
+.navbar #signInButton { display: none; }
+.navbar .dropdown { display: none; }
+.navbar .dropdown i { margin-right: 0.5em; }
 .navbar .container { justify-content: center; position: relative; }
 .navbar .container p { margin-bottom: 0; }
 .navbar .navbar-nav { flex-direction: row; gap: 2em; }
 .navbar .navbar-brand { margin-right: 0; }
 .navbar h1 { font-family: 'Comfortaa', cursive; }
-.navbar h2 { font-size: calc(1rem + 0.4vw); font-weight: 100; }
+.navbar h2 { font-size: calc(1rem + 0.4vw); font-weight: 300; }
 .navbar a.navbar-brand, .navbar a.navbar-brand:link { text-decoration: none; color: black; }
-.navbar .dark-mode-toggle { position: absolute; right: 1em; top: 1em; }
 .navbar hr { margin-bottom: 0; }
 .expand-collapse { padding-top: 0; padding-bottom: 1.5rem; }
 .expand-collapse li>a { cursor: pointer; }
@@ -35,6 +38,7 @@ footer { margin-top: auto!important; padding-top: 1rem!important; padding-bottom
 footer p { margin: 0; font-size: 0.8rem; color: #737373; text-align: center; }
 
 /* =================================== DARK MODE =================================== */
+.navbar .dark-mode-toggle { position: absolute; left: 1em; top: 1em; }
 .dark-mode { background-color: #222222; color: white; }
 .dark-mode a { color: #30a7d1; }
 .dark-mode .navbar a.navbar-brand, .dark-mode .navbar a.navbar-brand:link { color: white; }

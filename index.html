@@ -22,6 +22,25 @@
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-config" content="./assets/favicon/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
+	
+	<!-- FIREBASE -->
+	<!-- update the version number as needed --> 
+	<script defer src="/__/firebase/9.6.8/firebase-app-compat.js"></script> 
+	<!-- include only the Firebase features as you need --> 
+	<script defer src="/__/firebase/9.6.8/firebase-auth-compat.js"></script> 
+	<script defer src="/__/firebase/9.6.8/firebase-database-compat.js"></script> 
+	<script defer src="/__/firebase/9.6.8/firebase-firestore-compat.js"></script> 
+	<script defer src="/__/firebase/9.6.8/firebase-functions-compat.js"></script> 
+	<script defer src="/__/firebase/9.6.8/firebase-messaging-compat.js"></script> 
+	<script defer src="/__/firebase/9.6.8/firebase-storage-compat.js"></script> 
+	<script defer src="/__/firebase/9.6.8/firebase-analytics-compat.js"></script> 
+	<script defer src="/__/firebase/9.6.8/firebase-remote-config-compat.js"></script> 
+	<script defer src="/__/firebase/9.6.8/firebase-performance-compat.js"></script> 
+	<!-- 
+		  initialize the SDK after all desired features are loaded, set useEmulator to false
+		  to avoid connecting the SDK to running emulators.
+		--> 
+	<script defer src="/__/firebase/init.js?useEmulator=true"></script>
 </head>
 	
 <body class="d-flex flex-column h-100 dark-mode">
@@ -33,6 +52,19 @@
 				<div class="btn-group" role="group" aria-label="Toggle dark mode">
 					<button type="button" class="btn btn-sm btn-outline-light" onclick="toggleDarkMode('light')" id="lightModeButton"><i class="bi bi-brightness-high"></i></button>
 					<button type="button" class="btn btn-sm btn-light" onclick="toggleDarkMode('dark')" id="darkModeButton"><i class="bi bi-moon"></i></button>
+				</div>
+			</div>
+			<div class="sign-in">
+				<a href="./signin.html" id="signInButton"><button type="button" class="btn btn-primary btn-sm">Sign In</button></a>
+				<div class="dropdown" id="profileDropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Toggle profile drop-down">
+						<i class="bi bi-person-circle"></i><span id="profileUser"></span>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+						<li><a class="dropdown-item" href="./profile.html">Profile</a></li>
+						<li><hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item" onclick="logout()" href="#">Sign out</a></li>
+					</ul>
 				</div>
 			</div>
 			<div><a class="navbar-brand" href="#">
@@ -137,6 +169,7 @@
 <script src="./js/darkmode.js"></script>
 <script src="./js/checklistData.json"></script>
 <script src="./js/checklist.js"></script>
+<script defer type="text/javascript" src="js/auth.js"></script>
 
 </body>
 </html>
