@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="A web-based checklist for tidying up">
 	<meta name="author" content="Stephanie Cervi">
-	<title>Sign In || Neatenize</title>
+	<title>Profile || Neatenize</title>
 
 	<!-- CSS -->
 	<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -51,10 +51,6 @@
 		  to avoid connecting the SDK to running emulators.
 		--> 
 	<script defer src="/__/firebase/init.js?useEmulator=true"></script>
-	
-	<!-- Login UI from Firebase -->
-	<script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
-	<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
 </head>
 	
 <body class="d-flex flex-column h-100 dark-mode">
@@ -66,6 +62,19 @@
 				<div class="btn-group" role="group" aria-label="Toggle dark mode">
 					<button type="button" class="btn btn-sm btn-outline-light" onclick="toggleDarkMode('light')" id="lightModeButton"><i class="bi bi-brightness-high"></i></button>
 					<button type="button" class="btn btn-sm btn-light" onclick="toggleDarkMode('dark')" id="darkModeButton"><i class="bi bi-moon"></i></button>
+				</div>
+			</div>
+			<div class="sign-in">
+				<a href="./signin.html" id="signInButton"><button type="button" class="btn btn-primary btn-sm">Sign In</button></a>
+				<div class="dropdown" id="profileDropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Toggle profile drop-down">
+						<i class="bi bi-person-circle"></i><span id="profileUser" class="d-none d-sm-inline"></span>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+						<li><a class="dropdown-item" href="./profile.html">Profile</a></li>
+						<li><hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item" onclick="logout()" href="#">Sign out</a></li>
+					</ul>
 				</div>
 			</div>
 			<div><a class="navbar-brand" href="./index.html">
@@ -88,17 +97,87 @@
 <!-- Begin page content -->
 <main class="flex-shrink-0">
 	
-	<div class="container">
+	<div class="container" id="profileData">
 		
-		<h2 class="text-center">Sign in or create an account</h2>
+		<noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the content for this website, please enable JavaScript.</noscript>
 	
-		<p class="text-center">Please select a sign in method:</p>
+		<h2>Profile</h2>
 
-		<section class="container" id="login-container">
-			<div id="firebaseui-auth-container"></div>
-			<div id="loader">Loading...</div>
-		</section>
+		<h3 id="user-name"></h3>
+		<div id="user-details"></div>
+
+		<div id="deleteDiv"></div>
 		
+	</div>
+	
+	<div id="toast-container" class="toast-container position-fixed p-3"></div>
+	
+	<!-- Edit displayName modal -->
+	<div class="modal fade" id="editDisplayNameModal" tabindex="-1" aria-labelledby="editDisplayNameModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="editDisplayNameModalLabel">Edit your information</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+
+					<div class="mb-3 row">
+						<label for="newName" class="col-form-label">Please enter a new name:</label>
+						<div><input type="text" class="form-control col-10" name="newName" id="newName" /></div>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+					<button type="submit" class="btn btn-primary" id="editNameButton" onclick="changeName()" data-bs-dismiss="modal">Submit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Edit email modal -->
+	<div class="modal fade" id="editEmailModal" tabindex="-1" aria-labelledby="editEmailModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="editEmailModalLabel">Edit your information</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+
+					<div class="mb-3 row">
+						<label for="newName" class="col-form-label">Please enter a new email address:</label>
+						<div><input type="email" class="form-control col-10" name="newEmail" id="newEmail" /></div>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+					<button type="submit" class="btn btn-primary" id="editEmailButton" onclick="changeEmail()" data-bs-dismiss="modal">Submit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Comfirm delete account modal -->
+	<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="deleteModalLabel">Please confirm</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<h5>Delete your account and all your data?</h5>
+					<p>Please confirm that you want to delete your account and all of your data from our servers.  This is unrecoverable.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="cancel" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+					<button type="submit" class="btn btn-success" data-bs-dismiss="modal" onClick="deleteUser()">Delete my account</button>
+				</div>
+			</div>
+		</div>
 	</div>
 	
 </main>
@@ -115,7 +194,7 @@
 <script src="./js/darkmode.js"></script>
 <script src="./js/cookie-banner.js"></script>
 <script defer type="text/javascript" src="js/auth.js"></script>
-<script defer type="text/javascript" src="js/login.js"></script>
+<script defer type="text/javascript" src="js/profile.js"></script>
 
 </body>
 </html>

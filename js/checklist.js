@@ -52,7 +52,7 @@ for (const listIndex in checklistData) {
 	checklistContent += `<div class="card-body collapse show" id="collapse${listGroup.id}"><div class="checklist">`;
 	for (const itemIndex in listGroup.contents) {
 		const item = listGroup.contents[itemIndex];
-		checklistContent += `<div class="form-check"><input class="form-check-input" type="checkbox" value="" id="${listGroup.id}-${item.id}"><label class="form-check-label" for="${listGroup.id}-${item.id}">${item.title}</label></div>`;
+		checklistContent += `<div class="form-check"><input class="form-check-input" type="checkbox" value="" id="${listGroup.id}-${item.id}" onclick="toggleChecked('${listGroup.id}-${item.id}')"><label class="form-check-label" for="${listGroup.id}-${item.id}">${item.title}</label></div>`;
 	}
 	checklistContent += `</div></div></div></div>`;
 }
