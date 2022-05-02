@@ -32,8 +32,6 @@ function toggleChecked (itemFullID) {
 		}).catch ((error) => {
 			console.error ('Error updating user data: ', error);
 		});
-	} else {
-		alert ('Error saving user data');
 	}
 }
 
