@@ -13,7 +13,8 @@
 .navbar .container { justify-content: center; position: relative; }
 .navbar .container p { margin-bottom: 0; }
 .navbar .navbar-nav { flex-direction: row; column-gap: 2em; flex-wrap: wrap; justify-content: center; }
-.navbar .navbar-brand { margin-right: 0; }
+.navbar .navbar-brand { margin-right: 0; position: relative; }
+.navbar .navbar-brand::before { content: "BETA"; position: absolute; left: 5em; top: -1em; z-index: 10; background-color: firebrick; color: white; padding: 0 0.25em; font-size: 0.65em; border-radius: 3px; font-weight: bold; opacity: 0.5; letter-spacing: 1px; }
 .navbar h1 { font-family: 'Comfortaa', cursive; }
 .navbar h2 { font-size: calc(1rem + 0.4vw); font-weight: 300; }
 .navbar a.navbar-brand, .navbar a.navbar-brand:link { text-decoration: none; color: black; }
