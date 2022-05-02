@@ -47,6 +47,8 @@ footer p { margin: 0; font-size: 0.8rem; color: #737373; text-align: center; }
 .dark-mode .card-body .form-check-input { background-color: unset; border-color: rgba(255, 255, 255, .25); }
 .dark-mode .card-body .form-check-input:checked { background-color: #0d6efd; border-color: #0d6efd; }
 .dark-mode .card-header { background-color: rgba(255, 255, 255, .05); border-bottom-color: rgba(255, 255, 255, .25); }
+.dark-mode .modal-content { background-color: #222222; }
+.dark-mode .modal-content .btn-close { filter: invert(98%) sepia(1%) saturate(3241%) hue-rotate(110deg) brightness(124%) contrast(96%); }
 .dark-mode footer { background-color: #444444; }
 .dark-mode footer p { color: #939393; }
 .dark-mode footer a { color: #30A7D1; }
