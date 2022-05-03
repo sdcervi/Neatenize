@@ -28,10 +28,13 @@ function toggleChecked (itemFullID) {
 			}
 		}, { merge: true }).then(() => {
 			const listSet = document.getElementById(`collapse${listBoxID}`).firstChild.childNodes;
-			checkComplete (listBox, listSet)
+			checkComplete (listBox, listSet);
 		}).catch ((error) => {
 			console.error ('Error updating user data: ', error);
 		});
+	} else {
+		const listSet = document.getElementById(`collapse${listBoxID}`).firstChild.childNodes;
+		checkComplete (listBox, listSet);
 	}
 }
 

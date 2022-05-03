@@ -38,6 +38,7 @@ p.keeplength::before { content: "\00BB"; position: relative; right: 0.5em; }
 /* ================================= FOOTER STYLES ================================= */
 footer { margin-top: auto!important; padding-top: 1rem!important; padding-bottom: 1rem!important; background-color: rgb(248, 249, 250); }
 footer p { margin: 0; font-size: 0.8rem; color: #737373; text-align: center; }
+footer a { color: #006af7; }
 
 /* =================================== DARK MODE =================================== */
 .navbar .dark-mode-toggle { position: absolute; left: 1em; top: 1em; }

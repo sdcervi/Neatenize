@@ -47,7 +47,7 @@ for (const listIndex in checklistData) {
 	const listGroup = checklistData[listIndex];
 	checklistContent += `<div class="col"><div class="card" id="${listGroup.id}">`;
 	checklistContent += `<div class="card-header">`;
-	checklistContent += `<i class="bi bi-arrows-collapse" data-bs-toggle="collapse" data-bs-target="#collapse${listGroup.id}" aria-expanded="true" aria-controls="collapse${listGroup.id}" onclick="swapCollapse('${listGroup.id}')" role="button" tabindex="0"></i>`;
+	checklistContent += `<i class="bi bi-arrows-collapse" data-bs-toggle="collapse" data-bs-target="#collapse${listGroup.id}" aria-expanded="true" aria-controls="collapse${listGroup.id}" aria-label="Collapse this checklist group" onclick="swapCollapse('${listGroup.id}')" role="button" tabindex="0"></i>`;
 	checklistContent += `<h2>${listGroup.title}</h2></div>`;
 	checklistContent += `<div class="card-body collapse show" id="collapse${listGroup.id}"><div class="checklist">`;
 	for (const itemIndex in listGroup.contents) {
