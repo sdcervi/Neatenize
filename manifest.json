@@ -1,6 +1,8 @@
 {
-    "name": "Neatize",
-    "short_name": "Neatize",
+    "name": "Neatenize",
+    "short_name": "Neatenize",
+	"description": "A simple, minimalist clean-up checklist for a simple, minimalist environment",
+	"id": "/assets/favicon/",
     "icons": [
         {
             "src": "/assets/favicon/android-chrome-192x192.png",
@@ -13,7 +15,7 @@
             "type": "image/png"
         },
         {
-            "src": "/assets/favicon/android-chrome-512x512.png",
+            "src": "/assets/favicon/android-chrome-512x512-maskable.png",
             "sizes": "512x512",
             "type": "image/png",
 			"purpose":	"maskable"
@@ -21,6 +23,10 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "start_url": "https://neatenize.app",
-    "display": "standalone"
+    "start_url": "/index.html",
+	"scope": "/",
+    "display": "standalone",
+	"orientation": "any",
+	"dir": "ltr",
+	"lang": "en-US"
 }
