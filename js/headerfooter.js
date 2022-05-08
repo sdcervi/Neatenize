@@ -56,16 +56,3 @@ footerContents += `<p class="d-none d-print-block"><a href="https://neatenize.ap
 footerContents += `</div>`;
 
 footer.innerHTML = footerContents;
-
-// Service worker
-
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register("/sw.js")
-    .then(serviceWorker => {
-      console.log("Service Worker registered: ", serviceWorker);
-    })
-    .catch(error => {
-      console.error("Error registering the Service Worker: ", error);
-    });
-}

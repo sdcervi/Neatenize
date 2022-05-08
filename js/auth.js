@@ -43,7 +43,9 @@ firebase.auth().onAuthStateChanged(function(user) {
 		document.getElementById('profileUser').textContent = user.displayName;
 		getUserData(user);
 	} else {
-		document.getElementById('signInButton').style.display = 'block';
+		if (document.getElementById('signInButton')) {
+			document.getElementById('signInButton').style.display = 'block';
+		}
 		document.getElementById('profileDropdown').remove();
 	}
 });
