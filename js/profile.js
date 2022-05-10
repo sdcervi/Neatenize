@@ -10,7 +10,7 @@ function getProfileData (user) {
 	// Display the user's account details
 	const details = document.getElementById('user-details');
 	let detailsContent = `<h4>Your information</h4>`;
-	detailsContent += `<div class="row"><div class="col-5 col-sm-4 col-md-3 col-xl-2"><p><strong>Email</strong></p></div><div class="col-7 col-sm-8 col-md-9 col-xl-10"><p>${user.email}<button type="button" class="btn btn-sm btn-link btn-edit" data-bs-toggle="modal" data-bs-target="#editEmailModal"><i class="bi bi-pencil-square"></i></button></p></div></div>`;
+	detailsContent += `<div class="row"><div class="col-5 col-sm-4 col-md-3 col-xl-2"><p><strong>Email</strong></p></div><div class="col-7 col-sm-8 col-md-9 col-xl-10"><p id="email"></p></div></div>`;
 	detailsContent += `<div class="row"><div class="col-5 col-sm-4 col-md-3 col-xl-2"><p><strong>Linked accounts</strong></p></div>`;
 	detailsContent += `<div class="col-7 col-sm-8 col-md-9 col-xl-10">`;
 	user.providerData.forEach((profile) => {
@@ -26,6 +26,9 @@ function getProfileData (user) {
 	detailsContent += `</div>`;
 	detailsContent += `<div class="col-12"><button class="btn btn-sm btn-link" onclick="resetPassword()">Send password reset email</button></div></row>`;
 	details.innerHTML = detailsContent;
+	
+	document.getElementById('email').textContent = user.email;
+	document.getElementById('email').innerHTML += `<button type="button" class="btn btn-sm btn-link btn-edit" data-bs-toggle="modal" data-bs-target="#editEmailModal"><i class="bi bi-pencil-square"></i></button>`;
 		
 	document.getElementById('deleteDiv').innerHTML = '<hr><button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete my account and data</button>';
 }

@@ -42,8 +42,10 @@ footer a { color: #006af7; }
 
 /* =================================== DARK MODE =================================== */
 .navbar .dark-mode-toggle { position: absolute; left: 1em; top: 1em; }
+.dark-mode .navbar .navbar-brand::before { background-color: firebrick; color: white; opacity: 0.75; }
 .dark-mode { background-color: #222222; color: white; }
-.dark-mode a { color: #30a7d1; }
+.dark-mode a, .dark-mode .btn-link { color: #00bcff; }
+.dark-mode a:hover, .dark-mode a:focus, .dark-mode a:active, .dark-mode .btn-link:hover, .dark-mode .btn-link:focus, .dark-mode .btn-link:active { color: #00dba6; }
 .dark-mode .navbar a.navbar-brand, .dark-mode .navbar a.navbar-brand:link { color: white; }
 .dark-mode .card { background-color: unset; border-color: rgba(255, 255, 255, .25); }
 .dark-mode .card-body .form-check-input { background-color: unset; border-color: rgba(255, 255, 255, .25); }
@@ -52,8 +54,8 @@ footer a { color: #006af7; }
 .dark-mode .modal-content { background-color: #222222; }
 .dark-mode .modal-content .btn-close { filter: invert(98%) sepia(1%) saturate(3241%) hue-rotate(110deg) brightness(124%) contrast(96%); }
 .dark-mode footer { background-color: #444444; }
-.dark-mode footer p { color: #939393; }
-.dark-mode footer a { color: #30A7D1; }
+.dark-mode footer p { color: #c9c9c9; }
+.dark-mode footer a { color: #34caff; }
 
 /* ================================== PRINT STYLES ================================= */
 @media only print {
