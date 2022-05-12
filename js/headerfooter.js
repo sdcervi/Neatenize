@@ -18,7 +18,7 @@ if (window.location.pathname != '/signin.html') {
 headerContents += `<div class="dropdown" id="profileDropdown">`;
 headerContents += `<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Toggle profile drop-down"><i class="bi bi-person-circle"></i><span id="profileUser" class="d-none d-sm-inline"></span></button>`;
 headerContents += `<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">`;
-headerContents += `<li><a class="dropdown-item" href="./profile.html">Profile</a></li>`;
+headerContents += `<li><a class="dropdown-item" href="./profile.html">Profile &amp; Settings</a></li>`;
 headerContents += `<li><hr class="dropdown-divider"></li>`;
 headerContents += `<li><a class="dropdown-item" onclick="logout()" href="#">Sign out</a></li>`;
 headerContents += `</ul>`;

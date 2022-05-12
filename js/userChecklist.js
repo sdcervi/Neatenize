@@ -1,5 +1,13 @@
+// Create event listeners for user clicking on anything in the webpage
+// Thanks to event delegation, this bubbles up with the unique element each time
+if (document.addEventListener) {
+    document.addEventListener("click", handleClick, false);
+} else if (document.attachEvent) {
+    document.attachEvent("onclick", handleClick);
+}
+
 // Checks if all checkboxes in a card are checked
-function checkComplete (listBox, listSet) {
+function checkComplete (listBox, listSet, autoCollapse) {
 	let listComplete = [];
 	for (listItem of listSet) {
 		listComplete.push(listItem.firstChild.checked);
@@ -8,6 +16,11 @@ function checkComplete (listBox, listSet) {
 		listBox.classList.add('completed');
 	} else {
 		listBox.classList.remove('completed');
+	}
+	
+	// If user has auto-collapse enabled
+	if (autoCollapse) {
+		collapseCompleted();
 	}
 }
 
@@ -38,8 +51,29 @@ function toggleChecked (itemFullID) {
 	}
 }
 
+// Event handler for user clicks
+function handleClick(event) {
+    event = event || window.event;
+    event.target = event.target || event.srcElement;
+
+    let element = event.target;
+
+    // Climb up the document tree from the target of the event
+    while (element) {
+        if (element.nodeName === "DIV" && /form-check/.test(element.className)) {
+            // The user clicked on a <div> or clicked on an element inside a <div> with class "form-check"
+            toggleChecked(element.firstChild.id);
+            break;
+        } else if (element.nodeName === "I" && /bi-chevron-up/.test(element.className)) {
+			element.classList.toggle('turned');
+		}
+
+        element = element.parentNode;
+    }
+}
+
 // Gets the already-completed items from user data and checks those boxes
-function writeChecklist (checklist) {
+function writeChecklist (checklist, autoCollapse) {
 	if (Object.keys(checklist).length) {
 		for (const listID in checklist) {
 			// Get the HTML element containing the list's card
@@ -57,7 +91,7 @@ function writeChecklist (checklist) {
 			
 			// Get array of all checkboxes in the list, and mark as complete if everything is checked
 			const listSet = document.getElementById(`collapse${listID}`).firstChild.childNodes;
-			checkComplete (listBox, listSet);
+			checkComplete (listBox, listSet, autoCollapse);
 		}
 	} else {
 		return;
@@ -69,11 +103,11 @@ function getProfileData (user) {
 	// Fetch the user's data
 	const userData = db.collection('userData').doc(user.uid);
 	
-	// Check to see if user has challenges in the database
+	// Check to see if user has checklist progress in the database
 	userData.get().then((doc) => {
 		const data = doc.data();
 		if (data.cards) {
-			writeChecklist (data.cards);
+			writeChecklist (data.cards, data.autoCollapse);
 		} else {
 			console.log ('Error getting user data: no data present');
 		}

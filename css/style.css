@@ -25,7 +25,8 @@
 /* ================================== CARD STYLES ================================== */
 .card { margin-bottom: 1.5em; }
 .card-header h2 { font-size: 1.35rem; margin-bottom: 0; }
-.card-header i.bi { float: right; color: #30a7d1; font-size: 1.25rem; }
+.card-header i.bi { float: right; color: #30a7d1; font-size: 1.25rem; transition: transform 0.35s ease-in-out; }
+.card-header i.bi.turned { transform: rotate(180deg); }
 .card-header i.bi:focus, .card-header i.bi:hover, .card-header i.bi:active { color: #30d169; cursor: pointer; }
 .card-body { padding: 0; }
 .card-body .checklist { padding: 1rem; }

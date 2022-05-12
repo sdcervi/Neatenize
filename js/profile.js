@@ -1,3 +1,17 @@
+function changeCollapse () {
+	const user = firebase.auth().currentUser;
+	if (user) {
+		const userData = db.collection('userData').doc(user.uid);
+		userData.set({
+			autoCollapse: document.getElementById('setCollapse').checked
+		}, { merge: true }).catch ((error) => {
+			console.error ('Error updating user data: ', error);
+		});
+	} else {
+		console.log ('Error changing user settings.');
+	}
+}
+
 // Fetch the database's profile data for the user and display it
 function getProfileData (user) {
 	// Fetch the user's data
@@ -29,6 +43,21 @@ function getProfileData (user) {
 	
 	document.getElementById('email').textContent = user.email;
 	document.getElementById('email').innerHTML += `<button type="button" class="btn btn-sm btn-link btn-edit" data-bs-toggle="modal" data-bs-target="#editEmailModal"><i class="bi bi-pencil-square"></i></button>`;
+	
+	document.getElementById('settings').innerHTML = `<div class="form-check"><input class="form-check-input" type="checkbox" value="" id="setCollapse"><label class="form-check-label" for="setCollapse">Auto-collapse completed checklist sections</label></div>`;
+	
+	// Check to see what user settings exist
+	userData.get().then((doc) => {
+		const data = doc.data();
+		if (data.autoCollapse) {
+			document.getElementById('setCollapse').checked = data.autoCollapse;
+		} else {
+			document.getElementById('setCollapse').checked = false;
+		}
+		document.getElementById('setCollapse').addEventListener("click", changeCollapse, false);
+	}).catch((error) => {
+		console.log('Error getting user settings: ', error);
+	});
 		
 	document.getElementById('deleteDiv').innerHTML = '<hr><button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete my account and data</button>';
 }
