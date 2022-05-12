@@ -40,14 +40,25 @@ function toggleChecked (itemFullID) {
 				}
 			}
 		}, { merge: true }).then(() => {
-			const listSet = document.getElementById(`collapse${listBoxID}`).firstChild.childNodes;
+			const listSet = document.getElementById(`collapse${listBoxID}`).children[1].childNodes;
 			checkComplete (listBox, listSet);
 		}).catch ((error) => {
 			console.error ('Error updating user data: ', error);
 		});
 	} else {
-		const listSet = document.getElementById(`collapse${listBoxID}`).firstChild.childNodes;
+		const listSet = document.getElementById(`collapse${listBoxID}`).children[1].childNodes;
 		checkComplete (listBox, listSet);
+	}
+}
+
+function clearCard (cardID) {
+	const card = document.getElementById(cardID);
+	const checklist = card.children[1].children;
+	for (listItem of checklist) {
+		if (listItem.firstChild.checked) {
+			listItem.firstChild.checked = false;
+			toggleChecked(listItem.firstChild.id);
+		}
 	}
 }
 
@@ -66,6 +77,8 @@ function handleClick(event) {
             break;
         } else if (element.nodeName === "I" && /bi-chevron-up/.test(element.className)) {
 			element.classList.toggle('turned');
+		} else if (element.nodeName === "I" && /bi-x-circle/.test(element.className)) {
+			clearCard(element.parentNode.id);
 		}
 
         element = element.parentNode;
@@ -90,7 +103,7 @@ function writeChecklist (checklist, autoCollapse) {
 			}
 			
 			// Get array of all checkboxes in the list, and mark as complete if everything is checked
-			const listSet = document.getElementById(`collapse${listID}`).firstChild.childNodes;
+			const listSet = document.getElementById(`collapse${listID}`).children[1].childNodes;
 			checkComplete (listBox, listSet, autoCollapse);
 		}
 	} else {

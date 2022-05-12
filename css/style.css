@@ -25,10 +25,11 @@
 /* ================================== CARD STYLES ================================== */
 .card { margin-bottom: 1.5em; }
 .card-header h2 { font-size: 1.35rem; margin-bottom: 0; }
-.card-header i.bi { float: right; color: #30a7d1; font-size: 1.25rem; transition: transform 0.35s ease-in-out; }
-.card-header i.bi.turned { transform: rotate(180deg); }
-.card-header i.bi:focus, .card-header i.bi:hover, .card-header i.bi:active { color: #30d169; cursor: pointer; }
+.card-header i.bi, .card-body i.bi { float: right; color: #30a7d1; font-size: 1.25rem; margin-left: 0.4em; transition: transform 0.35s ease-in-out; }
+.card-header i.bi.turned, .card-body i.bi.turned { transform: rotate(180deg); }
+.card-header i.bi:focus, .card-header i.bi:hover, .card-header i.bi:active, .card-body i.bi:focus, .card-body i.bi:hover, .card-body i.bi:active { color: #30d169; cursor: pointer; }
 .card-body { padding: 0; }
+.card-body i.bi { margin-right: 0.75em; margin-top: 0.5em; }
 .card-body .checklist { padding: 1rem; }
 .card.completed::before { content: url("../assets/check-circle-fill.svg"); height: 1.5em; width: 1.5em; position: absolute; left: -0.5em; top: -0.5em; z-index: 10; }
 
@@ -75,7 +76,7 @@ footer a { color: #006af7; }
 	.card, .form-check-input { border: 1px solid gray; }
 	.card-header { border-bottom: 1px solid gray; }
 	.card-header h2 { font-size: 1rem; }
-	.card-header i { display: none; }
+	.card-header i, .card-body i { display: none; }
 	.card-body { font-size: 11px; }
 	.card-body .form-check { min-height: 1rem; }
 	

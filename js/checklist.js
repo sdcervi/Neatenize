@@ -43,9 +43,11 @@ for (const listIndex in checklistData) {
 	const listGroup = checklistData[listIndex];
 	checklistContent += `<div class="col"><div class="card" id="${listGroup.id}">`;
 	checklistContent += `<div class="card-header">`;
-	checklistContent += `<i class="bi bi-chevron-up" data-bs-toggle="collapse" data-bs-target="#collapse${listGroup.id}" aria-expanded="true" aria-controls="collapse${listGroup.id}" aria-label="Collapse this checklist group" role="button" tabindex="0"></i>`;
+	checklistContent += `<i class="bi bi-chevron-up" data-bs-toggle="collapse" data-bs-target="#collapse${listGroup.id}" aria-expanded="true" aria-controls="collapse${listGroup.id}" aria-label="Collapse this checklist group" role="button" tabindex="0" title="Collapse this checklist group"></i>`;
 	checklistContent += `<h2>${listGroup.title}</h2></div>`;
-	checklistContent += `<div class="card-body collapse show" id="collapse${listGroup.id}"><div class="checklist">`;
+	checklistContent += `<div class="card-body collapse show" id="collapse${listGroup.id}">`;
+	checklistContent += `<i class="bi bi-x-circle" aria-label="Clear all checked items in this group" role="button" tabindex="0" title="Clear all checked items in this group"></i>`;
+	checklistContent += `<div class="checklist">`;
 	for (const itemIndex in listGroup.contents) {
 		const item = listGroup.contents[itemIndex];
 		checklistContent += `<div class="form-check"><input class="form-check-input" type="checkbox" value="" id="${listGroup.id}-${item.id}"><label class="form-check-label" for="${listGroup.id}-${item.id}">${item.title}</label></div>`;
