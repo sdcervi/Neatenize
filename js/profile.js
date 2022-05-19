@@ -59,8 +59,8 @@ function getProfileData (user) {
 		console.log('Error getting user settings: ', error);
 	});
 		
-	document.getElementById('deleteDiv').innerHTML = '<hr><button class="btn btn-sm btn-outline-danger me-2" data-bs-toggle="modal" data-bs-target="#clearModal">Clear all checked items</button>';
-	document.getElementById('deleteDiv').innerHTML += '<button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete my account and data</button>';
+	document.getElementById('deleteDiv').innerHTML = '<hr><button class="btn btn-sm btn-outline-danger me-2 mb-2" data-bs-toggle="modal" data-bs-target="#clearModal">Clear all checked items</button>';
+	document.getElementById('deleteDiv').innerHTML += '<button class="btn btn-sm btn-outline-danger mb-4" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete my account and data</button>';
 }
 
 // Changes the user's displayName

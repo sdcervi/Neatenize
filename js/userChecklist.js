@@ -77,7 +77,7 @@ function handleClick(event) {
             break;
         } else if (element.nodeName === "I" && /bi-chevron-up/.test(element.className)) {
 			element.classList.toggle('turned');
-		} else if (element.nodeName === "I" && /bi-x-circle/.test(element.className)) {
+		} else if (element.nodeName === "I" && /bi-arrow-counterclockwise/.test(element.className)) {
 			clearCard(element.parentNode.id);
 		}
 
