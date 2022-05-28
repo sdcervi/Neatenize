@@ -33,7 +33,7 @@ headerContents += `<div class="container"><h2>A simple, minimalist clean-up chec
 headerContents += `<div class="container" id="nav-links"><ul class="navbar-nav">`;
 headerContents += `<li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>`;
 if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-	headerContents += `<li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal">About</a></li>`;
+	headerContents += `<li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal">About Neatenize</a></li>`;
 	headerContents += `<li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#howToModal">How do I use this?</a></li>`;
 	headerContents += `<li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#keepModal">When to keep what?</a></li>`;
 	headerContents += `<li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#betaModal">Beta testers</a></li>`;
