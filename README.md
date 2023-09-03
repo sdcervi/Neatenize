@@ -17,12 +17,12 @@ While it’s a very thorough list, it’s not exhaustive; not all categories wil
 Try it out today at [Neatenize](https://neatenize.app/).
 
 ### Development
-Neatenize was developed as a practice project to improve my JavaScript skills and gain familiarity with Firebase.  It was built with the intention of allowing users to access the checklist without needing an account; creating an account allows them to save and sync their progress between devices.  I also wanted to make sure it's accessible to people who prefer paper checklists by creating a printer-friendly version.
+I developed Neatenize as a practice project to improve my JavaScript skills and gain familiarity with Firebase.  It was built with the intention of allowing users to access the checklist without needing an account; creating an account allows them to save and sync their progress between devices.  I also wanted to make sure it's accessible to people who prefer paper checklists by creating a printer-friendly version.
 
 ### Technologies
 Neatenize was built using the Bootstrap 5.1 framework, Firebase, HTML, CSS, and JavaScript.  The code that creates the checklist cards and items iterates through a JSON file, for better maintainability and editing.
 
-I designed it to be used on all devices, fromo 375px wide and larger.  The interface is fully responsive across all screen sizes.
+I designed it to be used on all devices, from 375px wide and larger.  The interface is fully responsive across all screen sizes.
 
 ### Features
 - Check off individual items in a category list
